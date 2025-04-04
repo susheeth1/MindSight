@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Assessment - MindSight</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f9f8;
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    .question-card {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .question-card p {
+      font-weight: bold;
+    }
+    .question-card label {
+      display: block;
+      margin: 5px 0;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #199473;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background-color: #157d61;
+    }
+    .btn-section {
+      margin-top: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Stress, Anxiety & Depression Assessment</h2>
+    <form id="assessmentForm">
+      <div id="section1" class="section active">
+        <h3>Section 1: Stress</h3>
+        <div id="stressQuestions"></div>
+      </div>
+      <div id="section2" class="section">
+        <h3>Section 2: Anxiety</h3>
+        <div id="anxietyQuestions"></div>
+      </div>
+      <div id="section3" class="section">
+        <h3>Section 3: Depression</h3>
+        <div id="depressionQuestions"></div>
+      </div>
+      <div class="btn-section">
+        <button type="button" class="btn" id="nextBtn">Next</button>
+        <button type="submit" class="btn" id="submitBtn" style="display:none;">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const stressQuestions = [
+      "I found it hard to wind down",
+      "I tended to over-react to situations",
+      "I felt that I was using a lot of nervous energy",
+      "I found myself getting agitated",
+      "I found it difficult to relax",
+      "I was intolerant of anything that kept me from getting on with what I was doing",
+      "I felt that I was rather touchy"
+    ];
+    const anxietyQuestions = [
+      "I was aware of dryness of my mouth",
+      "I experienced breathing difficulty",
+      "I experienced trembling (e.g., in the hands)",
+      "I was worried about situations in which I might panic",
+      "I felt I was close to panic",
+      "I was aware of the action of my heart in the absence of physical exertion",
+      "I felt scared without any good reason"
+    ];
+    const depressionQuestions = [
+      "I couldn't seem to experience any positive feeling at all",
+      "I found it difficult to work up the initiative to do things",
+      "I felt that I had nothing to look forward to",
+      "I felt down-hearted and blue",
+      "I was unable to become enthusiastic about anything",
+      "I felt I wasn’t worth much as a person",
+      "I felt that life was meaningless"
+    ];
+    const options = ["Never", "Sometimes", "Often", "Almost Always"];
+
+    function renderQuestions(containerId, questions, startIndex) {
+      const container = document.getElementById(containerId);
+      questions.forEach((q, i) => {
+        const index = startIndex + i;
+        const div = document.createElement("div");
+        div.className = "question-card";
+        div.innerHTML = `<p>${q}</p>` + options.map((opt, val) => `
+          <label><input type="radio" name="q${index}" value="${val}" required> ${opt}</label>
+        `).join('');
+        container.appendChild(div);
+      });
+    }
+
+    renderQuestions("stressQuestions", stressQuestions, 1);
+    renderQuestions("anxietyQuestions", anxietyQuestions, 8);
+    renderQuestions("depressionQuestions", depressionQuestions, 15);
+
+    let currentSection = 1;
+    const totalSections = 3;
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      document.getElementById(`section${currentSection}`).classList.remove("active");
+      currentSection++;
+      document.getElementById(`section${currentSection}`).classList.add("active");
+      if (currentSection === totalSections) {
+        document.getElementById("nextBtn").style.display = "none";
+        document.getElementById("submitBtn").style.display = "inline-block";
+      }
+    });
+
+    document.getElementById("assessmentForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const responses = [];
+      for (let i = 1; i <= 21; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (!selected) {
+          alert("Please answer all questions.");
+          return;
+        }
+        responses.push(parseInt(selected.value));
+      }
+
+      const response = await fetch("/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ responses })
+      });
+
+      const result = await response.json();
+
+      // Save to localStorage
+      localStorage.setItem("stress_score", result.stress_score);
+      localStorage.setItem("anxiety_score", result.anxiety_score);
+      localStorage.setItem("depression_score", result.depression_score);
+      localStorage.setItem("stress_level", result.stress_level);
+      localStorage.setItem("anxiety_level", result.anxiety_level);
+      localStorage.setItem("depression_level", result.depression_level);
+
+      // Go to result page
+      window.location.href = "/result";
+    });
+  </script>
+</body>
+</html>

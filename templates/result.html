@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Assessment Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f9f8;
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #222;
+    }
+    .result-box {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 1.5rem;
+    }
+    .badge {
+      float: right;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: white;
+    }
+    .Normal { background-color: #4CAF50; }
+    .Mild { background-color: #8BC34A; }
+    .Moderate { background-color: #FFB300; }
+    .Severe { background-color: #FF5722; }
+    .ExtremelySevere { background-color: #D32F2F; }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .btn a {
+      background-color: #199473;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .btn a:hover {
+      background-color: #157d61;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Your Mental Health Assessment Results</h2>
+
+    <div class="result-box">
+      <h4>Stress Level <span id="stressLevel" class="badge">--</span></h4>
+      <p>Stress refers to emotional or physical tension. Chronic stress may impact your overall health and quality of life.</p>
+    </div>
+
+    <div class="result-box">
+      <h4>Anxiety Level <span id="anxietyLevel" class="badge">--</span></h4>
+      <p>Anxiety can cause feelings of worry, fear, or unease. Identifying it early is important for managing long-term well-being.</p>
+    </div>
+
+    <div class="result-box">
+      <h4>Depression Level <span id="depressionLevel" class="badge">--</span></h4>
+      <p>Depression affects how you feel, think, and act. Early detection can greatly help in managing symptoms.</p>
+    </div>
+
+    <div class="btn">
+      <a href="/assessment">Retake Assessment</a>
+    </div>
+
+    <footer>
+      © 2025 MindSight. This tool is not a diagnosis. For medical advice, consult a professional.
+    </footer>
+  </div>
+
+  <script>
+    function setBadge(id, level) {
+      const badge = document.getElementById(id);
+      badge.innerText = level || "--";
+      if (level) {
+        badge.classList.add(level.replace(/\s+/g, ""));
+      }
+    }
+
+    const stressLevel = localStorage.getItem("stress_level");
+    const anxietyLevel = localStorage.getItem("anxiety_level");
+    const depressionLevel = localStorage.getItem("depression_level");
+
+    setBadge("stressLevel", stressLevel);
+    setBadge("anxietyLevel", anxietyLevel);
+    setBadge("depressionLevel", depressionLevel);
+
+    if (
+      ["Severe", "Extremely Severe"].includes(stressLevel) ||
+      ["Severe", "Extremely Severe"].includes(anxietyLevel) ||
+      ["Severe", "Extremely Severe"].includes(depressionLevel)
+    ) {
+      alert("⚠️ Your results suggest elevated mental health concerns. Please consider consulting a professional.");
+    }
+  </script>
+</body>
+</html>
