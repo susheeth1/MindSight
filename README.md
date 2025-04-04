@@ -42,6 +42,7 @@ The following ML models were trained on the DASS-21 dataset:
 
 ### ✅ Best Model: **SVM (Support Vector Machine)**
 The SVM model achieved the highest overall accuracy and was selected for deployment in the final web application.
+![output](https://github.com/user-attachments/assets/65bfcd0d-7dc5-4622-af34-f977b1c64e2b)
 
 ---
 
