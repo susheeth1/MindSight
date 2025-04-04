@@ -26,8 +26,15 @@
 ## 📸 Screenshots
 
 > Add screenshots here if needed using:
+> `![Alt Text]("C:\Capstone_project_(8th sem)\MindSight\Screenshot\home(1).png")`
 > `![Alt Text](path/to/screenshot.png)`
-
+> `![Alt Text](path/to/screenshot.png)`
+> `![Alt Text](path/to/screenshot.png)`
+> `![Alt Text](path/to/screenshot.png)`
+> `![Alt Text](path/to/screenshot.png)`
+> `![Alt Text](path/to/screenshot.png)`
+> `![Alt Text](path/to/screenshot.png)`
+> `![Alt Text](path/to/screenshot.png)`
 ---
 
 ## 📦 Installation Instructions
