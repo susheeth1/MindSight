@@ -3,6 +3,47 @@
 **MindSight** is a web-based mental health screening tool that helps users self-assess their levels of **stress**, **anxiety**, and **depression** using a short, guided questionnaire based on DASS (Depression Anxiety Stress Scales). It uses machine learning models to predict the severity level for each condition.
 
 ---
+---
+
+## 📊 Dataset Used
+
+The DASS-21 dataset was used for training and evaluation of models. It is publicly available at:
+
+🔗 [DASS-21 Dataset on Mendeley Data](https://data.mendeley.com/datasets/br82d4xkj7/1)
+
+The dataset contains anonymized self-reported answers to 21 psychological questions, split into 3 categories:
+- 7 questions for **Stress**
+- 7 questions for **Anxiety**
+- 7 questions for **Depression**
+
+Each response is scored on a scale from 0 to 3. Final scores are calculated and mapped to severity levels:
+- 1 → Normal
+- 2 → Mild
+- 3 → Moderate
+- 4 → Severe
+- 5 → Extremely Severe
+
+---
+
+## 🧠 Machine Learning Models Used
+
+The following ML models were trained on the DASS-21 dataset:
+
+- Logistic Regression
+- Stochastic Gradient Descent (SGD)
+- Decision Tree
+- Random Forest
+- Gradient Boosting
+- AdaBoost
+- Support Vector Machine (SVM)
+- K-Nearest Neighbors (KNN)
+- Naive Bayes
+- XGBoost
+
+### ✅ Best Model: **SVM (Support Vector Machine)**
+The SVM model achieved the highest overall accuracy and was selected for deployment in the final web application.
+
+---
 
 ## 🌟 Features
 
