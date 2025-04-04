@@ -26,15 +26,16 @@
 ## 📸 Screenshots
 
 > Add screenshots here if needed using:
-> `![Alt Text]("C:\Capstone_project_(8th sem)\MindSight\Screenshot\home(1).png")`
-> `![Alt Text](path/to/screenshot.png)`
-> `![Alt Text](path/to/screenshot.png)`
-> `![Alt Text](path/to/screenshot.png)`
-> `![Alt Text](path/to/screenshot.png)`
-> `![Alt Text](path/to/screenshot.png)`
-> `![Alt Text](path/to/screenshot.png)`
-> `![Alt Text](path/to/screenshot.png)`
-> `![Alt Text](path/to/screenshot.png)`
+> ![home(1)](https://github.com/user-attachments/assets/529adeca-0272-4be1-a1d4-6526d83877ad)
+> ![Stress(2)](https://github.com/user-attachments/assets/d06d9341-6da4-4756-9633-3b398e13f9bf)
+> ![Stress(3)](https://github.com/user-attachments/assets/913f3f35-dfe8-41c1-99c8-a3e7845cde15)
+> ![Anxiety(4)](https://github.com/user-attachments/assets/0daf5b18-894c-4cd3-af5f-aa89c15867e0)
+> ![Anxiety(5)](https://github.com/user-attachments/assets/730190e4-9cd3-4f1f-b617-d8d4d89e71ca)
+> ![Depressin(6)](https://github.com/user-attachments/assets/bb0d191c-a761-49a1-a1ef-6ec6b85a7951)
+> ![Depression(7)](https://github.com/user-attachments/assets/6a29a685-6109-4fd9-818d-532c9024be38)
+> ![Result(8)](https://github.com/user-attachments/assets/8081fd45-0b87-4d81-9467-44730e641560)
+> ![Result(9)](https://github.com/user-attachments/assets/227e1a78-5d14-454a-a8ee-9ee37188c8f7)
+
 ---
 
 ## 📦 Installation Instructions
