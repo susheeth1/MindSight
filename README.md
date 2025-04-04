@@ -1,5 +1,5 @@
-# 🧠 MindSight – Mental Health Assessment Web App
-Mental-health-and-well-being-surveillance-assessment-and-tracking-solution-among-children.(Presidency Univerity Final year project ISR-G03)
+# 🧠 MindSight – Mental Health Assessment Web App ( Mental-health-and-well-being-surveillance-assessment-and-tracking-solution-among-children.(Presidency Univerity Final year project ISR-G03) )
+
 **MindSight** is a web-based mental health screening tool that helps users self-assess their levels of **stress**, **anxiety**, and **depression** using a short, guided questionnaire based on DASS (Depression Anxiety Stress Scales). It uses machine learning models to predict the severity level for each condition.
 
 ---
