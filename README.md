@@ -120,6 +120,20 @@ Level	Label (Output)
 4	Severe
 5	Extremely Severe
 
+💻 Web App Functionality
+Assessment Interface: 21 questions (7 per condition) with answer scale from 0 to 3.
+
+ML Integration: Predictions made via SVM models loaded using joblib.
+
+Frontend: HTML/CSS with clean, user-friendly layout.
+
+Backend: Flask API handling logic and prediction.
+
+Visualization: Results shown using color-coded severity indicators for clarity.
+
+🌐 Live Demo
+🔗 MindSight Live App
+
 💡 Disclaimer
 This app is intended for educational and demonstration purposes only. It is not a diagnostic tool. If you're experiencing mental health concerns, please consult a certified healthcare professional.
 
