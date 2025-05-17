@@ -1,9 +1,8 @@
-# 🧠 MindSight – Mental Health Assessment Web App ( Mental-health-and-well-being-surveillance-assessment-and-tracking-solution-among-children.(Presidency Univerity Final year project ISR-G03) )
-https://mindsight-lyr3.onrender.com
+# 🧠 MindSight – Mental Health Assessment Web App 
+## 🌐 Live Demo - [MindSight](https://mindsight-lyr3.onrender.com)
 **MindSight** is a web-based mental health screening tool that helps users self-assess their levels of **stress**, **anxiety**, and **depression** using a short, guided questionnaire based on DASS (Depression Anxiety Stress Scales). It uses machine learning models to predict the severity level for each condition.
 
----
----
+
 
 ## 📊 Dataset Used
 
@@ -79,15 +78,6 @@ The SVM model achieved the highest overall accuracy and was selected for deploym
 > ![Result(9)](https://github.com/user-attachments/assets/227e1a78-5d14-454a-a8ee-9ee37188c8f7)
 
 ---
-### Team Members
-| Sl. No. | Roll Number     | Student Name        |
-|---------|-----------------|---------------------|
-| 1       | 20211ISR0036    | Susheeth G          |
-| 2       | 20211ISR0047    | Ritish N            |
-| 3       | 20211ISR0039    | Vidyashree BN       |
-| 4       | 20211ISR0082    | Mithali S Anand     |
-| 5       | 20211ISR0040    | Tejashwini BA       |
----
 
 ## 📦 Installation Instructions
 
@@ -132,7 +122,7 @@ Backend: Flask API handling logic and prediction.
 Visualization: Results shown using color-coded severity indicators for clarity.
 
 🌐 Live Demo
-🔗 https://mindsight-lyr3.onrender.com
+🔗 [MindSight]https://mindsight-lyr3.onrender.com
 
 💡 Disclaimer
 This app is intended for educational and demonstration purposes only. It is not a diagnostic tool. If you're experiencing mental health concerns, please consult a certified healthcare professional.
