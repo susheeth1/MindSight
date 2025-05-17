@@ -122,7 +122,7 @@ Backend: Flask API handling logic and prediction.
 Visualization: Results shown using color-coded severity indicators for clarity.
 
 🌐 Live Demo
-🔗 [MindSight]https://mindsight-lyr3.onrender.com
+🔗 [MindSight](https://mindsight-lyr3.onrender.com)
 
 💡 Disclaimer
 This app is intended for educational and demonstration purposes only. It is not a diagnostic tool. If you're experiencing mental health concerns, please consult a certified healthcare professional.
