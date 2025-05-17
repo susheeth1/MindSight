@@ -1,4 +1,4 @@
-# 🧠 MindSight – Mental Health Assessment Web App 
+# 🧠 MindSight – Mental Health Assessment Web App 6
 ## 🌐 Live Demo - [MindSight](https://mindsight-lyr3.onrender.com)
 **MindSight** is a web-based mental health screening tool that helps users self-assess their levels of **stress**, **anxiety**, and **depression** using a short, guided questionnaire based on DASS (Depression Anxiety Stress Scales). It uses machine learning models to predict the severity level for each condition.
 
