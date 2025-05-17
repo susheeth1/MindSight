@@ -66,7 +66,7 @@ The SVM model achieved the highest overall accuracy and was selected for deploym
 
 ## 📸 Screenshots
 
-> Add screenshots here if needed using:
+
 > ![home(1)](https://github.com/user-attachments/assets/529adeca-0272-4be1-a1d4-6526d83877ad)
 > ![Stress(2)](https://github.com/user-attachments/assets/d06d9341-6da4-4756-9633-3b398e13f9bf)
 > ![Stress(3)](https://github.com/user-attachments/assets/913f3f35-dfe8-41c1-99c8-a3e7845cde15)
